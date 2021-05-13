@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>じゃんけんゲーム</title>
+</head>
+<body>
+
+  <h1>じゃんけんゲーム</h1>
+  <div id="message">
+    <p>グー、チョキ、パーのボタンを押してね！</p>
+  </div>
+
+  <div class="flex">
+    <div class="container">
+      <span class="name">コンピューター</span>
+      <div class="wrap">
+        <span class="hand" id="com-hand"></span>
+      </div>
+    </div>
+    
+    <div class="container">
+      <span class="name">あなた</span>
+      <div class="wrap">
+        <span class="hand" id="your_hand"></span>
+      </div>
+    </div>
+  </div>
+    
+  <div class="result_message" id="result_message"></div>
+
+  <div class="selection"> 
+    <input type="button" value="グー" class="button" id="rock" onclick="this.disabled = true;">
+    <input type="button" value="チョキ" class="button" id="scissors" onclick="this.disabled = true;">
+    <input type="button" value="パー" class="button" id="paper" onclick="this.disabled = true;">
+  </div>
+
+  <div class="reload">
+    <button type="button" id="reload" onclick="reload();">もう1回やる</button>   
+  </div>
+
+  
+  <script src="./script.js"></script>
+</body>
+</html>

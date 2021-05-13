@@ -1,0 +1,142 @@
+@charset "UTF-8";
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: #444;
+  background-color: whitesmoke;
+}
+
+h1 {
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+/* id が メッセージのスタイル */
+#message p {
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* class が 名前のスタイル */
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 5rem 10rem 2rem;
+}
+
+.flex .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.flex .container span {
+  text-align: center;
+}
+
+.flex .container span.name {
+  width: 15rem;
+  font-size: 2rem;
+  display: inline-block;
+}
+
+.flex .container .wrap {
+  width: 15rem;
+  height: 15rem;
+  border: .1rem solid #444;
+  margin-top: 5rem;
+}
+
+.flex .container .wrap .hand {
+  width: 15rem;
+  line-height: 15rem;
+  font-size: 2.4rem;
+  display: inline-block;
+}
+
+.result_message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 2.4rem;
+  height: 5rem;
+}
+
+.selection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.selection input {
+  width: 10rem;
+  height: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 3rem 5rem;
+  border: 0.1rem solid #6ed454;
+  border-radius: 50%;
+  font-size: 2rem;
+  cursor: pointer;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  background-color: #6ed454;
+}
+
+.selection input:hover {
+  background-color: #6ed454;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.reload {
+  text-align: center;
+}
+
+.reload button {
+  background-color: transparent;
+  border: solid .2rem #444;
+  border-radius: 5rem;
+  margin-top: 1.6rem;
+  padding: .7rem 2rem;
+  font-size: 1.8rem;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.reload button:hover {
+  background-color: #444;
+  color: #fff;
+}
+/*# sourceMappingURL=style.css.map */
