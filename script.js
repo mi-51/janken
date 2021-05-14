@@ -56,8 +56,8 @@ function judge(your_hand) {
     }
 
     //自分がグーの時の勝敗判定
-    else if (your_hand === "グー") {
-      if (com_hand === "パー") {
+    else if (your_hand === rock_img) {
+      if (com_hand === paper_img) {
         message = "あなたの負けです";
       }
       else {
@@ -66,8 +66,8 @@ function judge(your_hand) {
     }
 
     //自分がチョキの時の勝敗判定
-    else if (your_hand === "チョキ") {
-      if (com_hand === "グー") {
+    else if (your_hand === scissors_img) {
+      if (com_hand === rock_img) {
         message = "あなたの負けです";
       }
       else {
@@ -77,7 +77,7 @@ function judge(your_hand) {
 
     //自分がパーの時の勝敗判定
     else {
-      if (com_hand === "チョキ") {
+      if (com_hand === scissors_img) {
         message = "あなたの負けです";
       }
       else {
@@ -86,16 +86,14 @@ function judge(your_hand) {
     }
 
     com_show = true;
+    
     document.getElementById("rock").disabled = true;
     document.getElementById("scissors").disabled = true;
     document.getElementById("paper").disabled = true;
+
     document.getElementById("result_message").innerHTML = message;
   }
 }
-
-//2回以上クリック禁止
-// ('.button').disabled = true;
-
 
 //リロードボタン
 let reload = document.getElementById('reload');
