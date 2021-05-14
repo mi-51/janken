@@ -29,10 +29,10 @@ function dice() {
 let com_show = false;
 function judge(your_hand) {
   if (com_show == false) {
-    
+
     let dice_result = dice();
     let com_hand;
-    
+
     //乱数の数値でCOMの出す手を指定
     if (dice_result == 1) {
       com_hand = "グー";
@@ -42,14 +42,14 @@ function judge(your_hand) {
       com_hand = "パー";
     }
     document.getElementById("com-hand").innerHTML = com_hand;
-    
+
     //勝敗判定部分
     let message;
     //あいこの時の勝敗判定
     if (your_hand === com_hand) {
       message = "あいこです";
     }
-    
+
     //自分がグーの時の勝敗判定
     else if (your_hand === "グー") {
       if (com_hand === "パー") {
@@ -59,7 +59,7 @@ function judge(your_hand) {
         message = "あなたの勝ちです！";
       }
     }
-    
+
     //自分がチョキの時の勝敗判定
     else if (your_hand === "チョキ") {
       if (com_hand === "グー") {
@@ -69,7 +69,7 @@ function judge(your_hand) {
         message = "あなたの勝ちです！";
       }
     }
-    
+
     //自分がパーの時の勝敗判定
     else {
       if (com_hand === "チョキ") {
@@ -79,14 +79,17 @@ function judge(your_hand) {
         message = "あなたの勝ちです！";
       }
     }
-    
+
     com_show = true;
+    document.getElementById("rock").disabled = true;
+    document.getElementById("scissors").disabled = true;
+    document.getElementById("paper").disabled = true;
     document.getElementById("result_message").innerHTML = message;
   }
 }
 
 //2回以上クリック禁止
-('.button').disabled = true;
+// ('.button').disabled = true;
 
 
 //リロードボタン
