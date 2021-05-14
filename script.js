@@ -2,18 +2,18 @@ window.onload = function () {
   let your_choice = false;
   if (your_choice === false) {
     document.getElementById("rock").onmousedown = function () {
-      document.getElementById("your_hand").innerHTML = "グー";
-      judge("グー");
+      document.getElementById("your_hand").innerHTML = rock_img;
+      judge(rock_img);
     }
 
     document.getElementById("scissors").onmousedown = function () {
-      document.getElementById("your_hand").innerHTML = "チョキ";
-      judge("チョキ");
+      document.getElementById("your_hand").innerHTML = scissors_img;
+      judge(scissors_img);
     }
 
     document.getElementById("paper").onmousedown = function () {
-      document.getElementById("your_hand").innerHTML = "パー";
-      judge("パー");
+      document.getElementById("your_hand").innerHTML = paper_img;
+      judge(paper_img);
     }
     your_choice = true;
   }
@@ -35,11 +35,11 @@ function judge(your_hand) {
 
     //乱数の数値でCOMの出す手を指定
     if (dice_result == 1) {
-      com_hand = "グー";
+      com_hand = rock_img;
     } else if (dice_result == 2) {
-      com_hand = "チョキ";
+      com_hand = scissors_img;
     } else {
-      com_hand = "パー";
+      com_hand = paper_img;
     }
     document.getElementById("com-hand").innerHTML = com_hand;
 
