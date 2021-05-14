@@ -1,3 +1,8 @@
+let rock_img = "<img src='./img/rock.png'>";
+let scissors_img = "<img src='./img/scissors.png'>";
+let paper_img = "<img src='./img/paper.png'>";
+
+
 window.onload = function () {
   let your_choice = false;
   if (your_choice === false) {
